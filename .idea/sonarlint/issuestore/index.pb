@@ -25,5 +25,3 @@ Y
 )src/test/java/pages/RegistrationPage.java,7/0/705c52e81e81bc6a508de54ed0ba77082630225f
 V
 &src/test/java/support/TestContext.java,2/8/28b0cd401c0349767ef326c3a33b98651debacbd
-o
-?src/test/java/definitions/EmmaW_AssessmentControl_Stepdefs.java,7/d/7d3b41ab8606e4371bea8cd85a12eae8fe320ec8
