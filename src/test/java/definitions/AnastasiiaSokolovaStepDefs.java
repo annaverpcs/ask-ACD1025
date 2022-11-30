@@ -51,5 +51,9 @@ public class AnastasiiaSokolovaStepDefs {
         String sInfoRole = getDriver().findElement(By.xpath("//div[@class='info']/p")).getText();
         assertThat(sInfoRole.equals(sRole)).isTrue();
     }
+    @Then("AS wait for {int} sec")
+    public void waitForSec(int iTime) throws Exception {
+        Thread.sleep(iTime*1000);
+    }
 }
 

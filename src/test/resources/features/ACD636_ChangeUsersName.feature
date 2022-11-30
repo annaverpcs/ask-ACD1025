@@ -14,10 +14,13 @@ Feature:
   Scenario: Login in ASK as Teacher
     Then AS element with "//mat-card[@class='login mat-card']" should be present
     Then AS login with "askteacher@mailinator.com" and "12345" as Teacher
+    Then AS wait for 2 sec
     Then AS check role of user is "TEACHER"
 
 
-
+  @changUserName1
+  Scenario: User registration
+    Given
 
   #Click "User's management" on the left navigation side menu
   #Switch to the "Teachers" tab on the "User's Management" screen on the main frame
