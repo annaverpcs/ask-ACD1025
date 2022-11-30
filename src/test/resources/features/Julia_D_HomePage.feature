@@ -11,3 +11,6 @@ Feature: ASK application
     And JD type "741852" as Password
     And JD I click on "Sign In" button
     Then JD wait for 2 seconds
+
+  @homepage2
+  Scenario: Open ASK application
