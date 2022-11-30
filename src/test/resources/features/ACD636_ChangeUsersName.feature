@@ -18,9 +18,7 @@ Feature:
     Then AS check role of user is "TEACHER"
 
 
-  @changUserName1
-  Scenario: User registration
-    Given
+
 
   #Click "User's management" on the left navigation side menu
   #Switch to the "Teachers" tab on the "User's Management" screen on the main frame
