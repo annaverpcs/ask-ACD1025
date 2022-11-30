@@ -15,4 +15,27 @@ public class JuliaDStepsDefs {
     public void iOpenURL(String sURL) {
         getDriver().get(sURL);
     }
+
+
+
+    @And("JD type {string} as Password")
+    public void jdTypeAsPassword(String sPassword) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
+        
+    }
+
+    @And("JD I click on {string} button")
+    public void jdIClickOnButton(String sButtonName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Sign In')]")).click();
+    }
+
+    @Then("JD wait for {int} seconds")
+    public void jdWaitForSeconds(long iSec) throws InterruptedException {
+        Thread.sleep(1000*iSec);
+    }
+
+    @Then("JD type {string} as Email Address")
+    public void jdTypeAsEmailAddress(String sEmail) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
+    }
 }
