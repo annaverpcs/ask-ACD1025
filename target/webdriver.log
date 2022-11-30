@@ -12,3 +12,13 @@ INFO 13:37:52:944 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using 
 INFO 13:37:52:965 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/averkhovskaya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
 INFO 13:44:45:415 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
 INFO 13:44:45:432 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/averkhovskaya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 18:47:17:676 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 18:47:17:690 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 22:11:36:555 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 22:11:36:569 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 22:21:23:481 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 22:21:23:495 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 22:22:31:592 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 22:22:31:606 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 22:28:51:530 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 22:28:51:549 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
