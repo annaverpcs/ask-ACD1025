@@ -73,5 +73,26 @@ public class AnnaVStepDefs {
     public void avSendActivationRequest() throws IOException {
         Helpers.activateUser(userId, activationCode);
     }
+
+    @Then("AV type {string} as Email Address")
+    public void avTypeAsEmailAddress(String sEmail) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
+    }
+    @And("AV type {string} as Password")
+    public void avTypeAsPassword(String sPassword) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
+    }
+
+    @And("AV click on {string} button")
+    public void avClickOnButton(String sButtonName) {
+        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Then("AV wait for {int} seconds")
+    public void avWaitForSeconds(long iSec) throws InterruptedException {
+        Thread.sleep(1000*iSec);
+        }
+
+
 }
 
