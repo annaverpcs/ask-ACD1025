@@ -4,9 +4,15 @@
   @homepage
   Feature: ASK application
 
+
     @homepage1
-    Scenario: Open ASK application
+    Scenario: Create a quiz and assign to a student
       Given AV navigate to "http://ask-internship.portnov.com/#/login"
+      Then AV type "master_teacher@aol.com" as Email Address
+      And AV type "12345" as Password
+      And AV click on "Sign In" button
+      Then AV wait for 2 seconds
+
 
     @scenario5
     Scenario: User registration
