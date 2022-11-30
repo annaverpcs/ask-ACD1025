@@ -94,6 +94,41 @@ public class AnnaVStepDefs {
         }
 
 
+    @Then("AV click on {string} menu item")
+    public void avClickOnMenuItem(String sMenuItem) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'"+sMenuItem+"')]")).click();
+    }
+
+    @Then("AV click on the {string} button")
+    public void avClickOnTheButton(String sButtonName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+sButtonName+"')]")).click();
+    }
+
+    @Then("AV type {string} as Quiz Title")
+    public void avTypeAsQuizTitle(String sQuizTitle) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(sQuizTitle);
+
+    }
+
+    @Then("AV add a question")
+    public void avAddAQuestion() {
+        //mat-icon[contains(text(),'add_circle')]
+        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+    }
+
+    @Then("AV choose {string} question type")
+    public void avChooseQuestionType(String sQuestionChoice) {
+
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+sQuestionChoice+"')]")).click();
+    }
+
+     @Then("AV type {string} as {string}")
+    public void avTypeAs(String sFieldValue, String sFieldPosition) {
+        getDriver().findElement(By.xpath("//textarea[@placeholder='"+sFieldPosition+"*']")).sendKeys(sFieldValue);
+         //textarea[@placeholder='Question *']
+         //textarea[@placeholder='Option 1*']
+         //textarea[@placeholder='Option 2*']
+    }
 }
 
-//comment
+
