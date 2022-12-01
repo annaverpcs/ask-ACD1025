@@ -11,12 +11,8 @@ U
 0src/test/java/pages/ConfirmRegistrationPage.java,4/3/43fe4ec7504ed506a248c4a10dfdf40dfbf16d7a
 e
 5src/test/java/definitions/EmmaW_Generic_Stepdefs.java,d/c/dcb412f4f3faa2b32187ea1a89b9f6470fa962fe
-T
-$src/test/java/pages/GenericPage.java,d/1/d1f649500a471adb592577d7041a35937a084d30
 Y
 )src/test/java/pages/HomePage_Student.java,9/5/953c1f118e30a8ac8f9ca37d88d2d178b48a728f
-Y
-)src/test/java/pages/HomePage_Teacher.java,0/9/09616c99705d5c8ca55604712a9d1c6402db5609
 P
  src/test/java/pages/IHasURL.java,2/c/2c47c6ab162ee88498b3547b58ce6fc2c63ff7f6
 R
