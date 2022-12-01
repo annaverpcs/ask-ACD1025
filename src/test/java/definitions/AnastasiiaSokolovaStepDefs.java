@@ -55,5 +55,6 @@ public class AnastasiiaSokolovaStepDefs {
     public void waitForSec(int iTime) throws Exception {
         Thread.sleep(iTime*1000);
     }
+
 }
 

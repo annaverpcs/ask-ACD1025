@@ -17,6 +17,9 @@ Feature:
     Then AS wait for 2 sec
     Then AS check role of user is "TEACHER"
 
+  @changUserName2
+  Scenario: Login in ASK as Teacher
+    Then AS click on "" menu item
 
 
 
