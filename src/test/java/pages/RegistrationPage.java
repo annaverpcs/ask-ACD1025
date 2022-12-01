@@ -2,6 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static support.TestContext.getDriver;
 
 public class RegistrationPage extends GenericPage{
     @FindBy (xpath = "//*[@formcontrolname='firstName']")
@@ -50,7 +53,7 @@ public class RegistrationPage extends GenericPage{
 
     public void clickRegister(){
         registerButton.click();
-        waitUntilInVisible(registerButton);
+        customWait(5); //this framework's wait
     }
 
 }
