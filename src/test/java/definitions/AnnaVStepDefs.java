@@ -18,7 +18,7 @@ import static support.TestContext.getDriver;
 public class AnnaVStepDefs {
     private Integer userId;
     private String activationCode;
-
+    private String isFieldPosition;
 
     @Given("AV navigate to {string}")
     public void iNavigateTo(String sURL) {
@@ -76,16 +76,16 @@ public class AnnaVStepDefs {
 
     @Then("AV type {string} as Email Address")
     public void avTypeAsEmailAddress(String sEmail) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
+        getDriver().findElement(By.xpath(XPathLibrary.sEmailXpath)).sendKeys(sEmail);
     }
     @And("AV type {string} as Password")
     public void avTypeAsPassword(String sPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
+        getDriver().findElement(By.xpath(XPathLibrary.sPasswordXpath)).sendKeys(sPassword);
     }
 
-    @And("AV click on {string} button")
-    public void avClickOnButton(String sButtonName) {
-        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+    @And("AV click on Sign In button")
+    public void avClickOnSignInButton(){
+        getDriver().findElement(By.xpath(XPathLibrary.sSubmitButtonXpath)).click();
     }
 
     @Then("AV wait for {int} seconds")
@@ -94,5 +94,42 @@ public class AnnaVStepDefs {
         }
 
 
+    @Then("AV click on {string} menu item")
+    public void avClickOnMenuItem(String sMenuItem) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'"+sMenuItem+"')]")).click();
+    }
+
+    @Then("AV click on {string} button")
+    public void avClickOnButton(String sButtonName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+sButtonName+"')]")).click();
+    }
+
+    @Then("AV type {string} as Quiz Title")
+    public void avTypeAsQuizTitle(String sQuizTitle) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(sQuizTitle);
+
+    }
+
+    @Then("AV add a question")
+    public void avAddAQuestion() {
+        //mat-icon[contains(text(),'add_circle')]
+        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+    }
+
+    @Then("AV choose {string} question type")
+    public void avChooseQuestionType(String sQuestionChoice) {
+
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+sQuestionChoice+"')]")).click();
+    }
+
+     @Then("AV type {string} as {string}")
+    public void avTypeAs(String sFieldValue, String sFieldPosition) {
+        getDriver().findElement(By.xpath("//textarea[@placeholder='"+sFieldPosition+"*']")).sendKeys(sFieldValue);
+         //textarea[@placeholder='Question *']
+         //textarea[@placeholder='Option 1*']
+         //textarea[@placeholder='Option 2*']
+    }
+
 }
+
 
