@@ -24,3 +24,15 @@ INFO 21:41:40:292 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using 
 INFO 21:41:40:314 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/averkhovskaya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
 INFO 10:39:53:758 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
 INFO 10:39:53:789 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/averkhovskaya/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 20:52:01:502 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 20:52:01:517 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\Luke\.m2\repository\webdriver\chromedriver\win32\107.0.5304.62\chromedriver.exe
+INFO 20:53:11:941 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 20:53:11:956 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\Luke\.m2\repository\webdriver\chromedriver\win32\107.0.5304.62\chromedriver.exe
+INFO 20:59:03:338 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 20:59:03:354 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\Luke\.m2\repository\webdriver\chromedriver\win32\107.0.5304.62\chromedriver.exe
+INFO 20:59:53:136 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 20:59:53:152 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\Luke\.m2\repository\webdriver\chromedriver\win32\107.0.5304.62\chromedriver.exe
+INFO 21:16:51:026 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 21:16:51:042 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\Luke\.m2\repository\webdriver\chromedriver\win32\107.0.5304.62\chromedriver.exe
+INFO 21:17:18:506 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 21:17:18:521 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\Luke\.m2\repository\webdriver\chromedriver\win32\107.0.5304.62\chromedriver.exe
