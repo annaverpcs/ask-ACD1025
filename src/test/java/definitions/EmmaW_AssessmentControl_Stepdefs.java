@@ -4,11 +4,16 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import pages.*;
+import support.DB_ConnectionHelper;
 import support.TestContext;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Map;
+import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -27,6 +32,9 @@ public class EmmaW_AssessmentControl_Stepdefs {
 
     Map<String, String> teacherData = TestContext
             .getDataByFileName("teacher");
+
+    private Integer userId;
+    private String activationCode;
 
 
     @Given("I input the {string} into the Email text field")
@@ -122,17 +130,36 @@ public class EmmaW_AssessmentControl_Stepdefs {
         loginPage.setPassword(studentData.get("password"));
     }
 
+//DB connection
 
-    @When("I validate my email")
-    public void iValidateMyEmail() {
+    @Then("I get the activation token from the db for the user")
+    public void iGetTheActivationTokenFromTheDbForTheUser() throws SQLException {
+        String tokenAndId = DB_ConnectionHelper.getAccessToken(studentData.get("email"));
+        System.out.println("Our DB results are: " + tokenAndId);
+
+        //separate the two values
+        String[] value = tokenAndId.split(";");
+
+        userId = Integer.valueOf(value[0]);
+        activationCode = value[1];
+
+        System.out.println("the separated values are: " + value[0] + " and " + value[1]);
+    }
+
+    @And("I  activate the account with the token")
+    public void iActivateTheAccountWithTheToken() throws IOException {
+        DB_ConnectionHelper.activateUser(userId, activationCode);
     }
 
 
+    @Given("I input a valid teacher email into the Email text field")
+    public void iInputAValidTeacherEmailIntoTheEmailTextField() {
+        loginPage.setEmail(teacherData.get("email"));
+    }
+
+    @And("I delete the student account with REST")
+    public void iDeleteTheStudentAccountWithREST() {
+        homeTeacherPage.getUserManagement();
+        homeTeacherPage.waitForList();
+    }
 }
-
-
-
-
-
-
-

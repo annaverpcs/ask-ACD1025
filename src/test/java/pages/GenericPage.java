@@ -1,14 +1,13 @@
 package pages;
 
+//import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import support.TestContext;
 
-import java.time.Duration;
 
 import static support.TestContext.getDriver;
 
@@ -44,21 +43,26 @@ public class GenericPage implements IHasURL{
 
     //customized getWai
     public WebDriverWait customWait(int sec){
-        // normal wait doesn't work in this framework, so put time out.
-        // WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(sec));
-        WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+        //  wait doesn't work in this framework, so put time out.
+         //WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(sec));
+        WebDriverWait wait = new WebDriverWait(getDriver(), sec);
         return wait;
     }
 
     public void waitUntilVisible(WebElement element) {
         getWait().until(ExpectedConditions.visibilityOf(element));
     }
+
     public void waitUntilInVisible(WebElement element) {
         getWait().until(ExpectedConditions.invisibilityOf(element));
     }
 
     //actions
     Actions actions = new Actions(getDriver());
+
+    //js
+    JavascriptExecutor js = (JavascriptExecutor)getDriver();
+    //js.executeScript() //probably pom.xml outdated, not finding this method.
 
 
 }
