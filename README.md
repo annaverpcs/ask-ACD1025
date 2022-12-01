@@ -31,7 +31,7 @@ To see the difference, you can also use **git diff**
 
 12 Run project to double-check if it is not broken.
 
-13 If there are no conflicts, you can push to GitHub. Being on your branch, type **git push origin branch name_of_your_branch**
+13 If there are no conflicts, you can push to GitHub. Being on your branch, type **git push origin name_of_your_branch**
 
 14 Create a PR (Pull Request) on GitHub. Repeat steps 1-13 for each complete task. Or repeat steps 3-12 to update an existing task's PR.
 
