@@ -10,11 +10,11 @@
       Given AV navigate to "http://ask-internship.portnov.com/#/login"
       Then AV type "master_teacher@aol.com" as Email Address
       And AV type "12345" as Password
-      And AV click on "Sign In" button
+      And AV click on Sign In button
       Then AV wait for 1 seconds
       Then AV click on "Quizzes" menu item
       Then AV wait for 1 seconds
-      Then AV click on the "Create New Quiz" button
+      Then AV click on "Create New Quiz" button
       Then AV wait for 1 seconds
       Then AV type "Quiz Title" as Quiz Title
       Then AV add a question
@@ -22,9 +22,8 @@
       Then AV type "Question Title" as "Question "
       Then AV type "Answer1" as "Option 1"
       Then AV type "Answer2" as "Option 2"
-      Then AV wait for 5 seconds
-      Then AV click on the "Save" button
-      Then AV wait for 5 seconds
+      Then AV click on "Save" button
+
 
 
     @scenario5
