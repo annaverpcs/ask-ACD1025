@@ -15,3 +15,15 @@ P
  src/test/java/pages/IHasURL.java,2/c/2c47c6ab162ee88498b3547b58ce6fc2c63ff7f6
 V
 &src/test/java/support/TestContext.java,2/8/28b0cd401c0349767ef326c3a33b98651debacbd
+P
+ src/test/java/support/Hooks.java,a/5/a5111116acb759886c67e8f0e9793df0dd585868
+R
+"src/test/java/pages/LoginPage.java,2/f/2febc867dad266b12f3cf09596e572e0dcf37dbf
+Y
+)src/test/java/pages/RegistrationPage.java,7/0/705c52e81e81bc6a508de54ed0ba77082630225f
+Y
+)src/test/java/pages/HomePage_Teacher.java,0/9/09616c99705d5c8ca55604712a9d1c6402db5609
+T
+$src/test/java/pages/GenericPage.java,d/1/d1f649500a471adb592577d7041a35937a084d30
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
