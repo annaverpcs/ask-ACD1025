@@ -15,11 +15,15 @@ P
  src/test/java/pages/IHasURL.java,2/c/2c47c6ab162ee88498b3547b58ce6fc2c63ff7f6
 V
 &src/test/java/support/TestContext.java,2/8/28b0cd401c0349767ef326c3a33b98651debacbd
-s
-C.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml,1/4/14fe967b0ca384fb016389400e75c8e6a03eb06c
-s
-C.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml,5/b/5baf89adf53264ace000d74e57679d0f76256d78
-u
-E.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml,0/5/051a7421f91af1c4fcf7a5a42e2db544e88d5a62
-j
-:.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml,f/6/f6ba47916cd6643bc114d221f84eb8da0eb1343b
+P
+ src/test/java/support/Hooks.java,a/5/a5111116acb759886c67e8f0e9793df0dd585868
+R
+"src/test/java/pages/LoginPage.java,2/f/2febc867dad266b12f3cf09596e572e0dcf37dbf
+Y
+)src/test/java/pages/RegistrationPage.java,7/0/705c52e81e81bc6a508de54ed0ba77082630225f
+Y
+)src/test/java/pages/HomePage_Teacher.java,0/9/09616c99705d5c8ca55604712a9d1c6402db5609
+T
+$src/test/java/pages/GenericPage.java,d/1/d1f649500a471adb592577d7041a35937a084d30
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
