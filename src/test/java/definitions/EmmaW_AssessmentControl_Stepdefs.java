@@ -4,8 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import pages.*;
 import support.DB_ConnectionHelper;
 import support.TestContext;
@@ -13,7 +11,6 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Map;
-import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -157,8 +154,8 @@ public class EmmaW_AssessmentControl_Stepdefs {
         loginPage.setEmail(teacherData.get("email"));
     }
 
-    @And("I delete the student account with REST")
-    public void iDeleteTheStudentAccountWithREST() {
+    @And("I delete the student account")
+    public void iDeleteTheStudentAccount() {
         homeTeacherPage.getUserManagement();
         homeTeacherPage.waitForList();
     }
