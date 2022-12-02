@@ -16,6 +16,27 @@ public class SaraBXPathLibrary {
     public static String sErrorMessageXpath = "//mat-error[contains(text(),'This field is required')]";
     public static String sBackToLoginBtnXpath = "//span[contains(text(),'Back to Login')]";
     public static String sErrorMessage2Xpath = "//mat-error[contains(text(),'Should contain only latin characters')]";
+    public static String sAssignmentsXpath="//h5[contains(text(),'Assignments')]";
+    public static String sAssignmentListXpath ="//h4[contains(text(),'List of Assignments')]";
+    public static String sCreateNewAssignmentXpath = "//span[contains(text(),'Create New Assignment')]";
+    public static String sGiveAssignmentXpath = "//h4[contains(text(),'Give Assignment')]";
+    public static String sSelectQuizToAssignXpath = "//span[contains(text(),'Select Quiz To Assign')]";
+    public static String sSelectQuiz1014Xpath = "//span[contains(text(),'1014 quiz')]";
+    public static String sSelectStudentToAssignXpath = "//span[text()='ABCD']";
+    public static String sSelectGiveAssignmentXpath = "//span[contains(text(),'Give Assignment')]";
+    public static String sSelectHomeXpath = "//h5[contains(text(),'Home')]";
+    public static String sGoToAssignmentXpath = "//h5[contains(text(),'Home')]";
+
+
+
+
+
+
+
+
+
+
+
 
 
 
