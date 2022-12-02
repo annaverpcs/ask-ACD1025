@@ -1,6 +1,7 @@
 // Author: Anastasiia Sokolova
 package definitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,16 +13,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
 
 public class AnastasiiaSokolovaStepDefs {
     @Given("AS open url {string}")
     public void asOpenUrl(String sURL) {
-            getDriver().get(sURL);
+        getDriver().get(sURL);
         }
 
-    @Then("AS element with {string} should be present")
+    @Then("AS element with xpath {string} should be present")
     public void asElementWithShouldBePresent(String sXpath) {
         assertThat(getDriver().findElements(By.xpath(sXpath))).hasSize(1);
     }
@@ -46,7 +49,7 @@ public class AnastasiiaSokolovaStepDefs {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
     }
 
-    @Then("AS check role of user is {string}")
+    @Then("AS verify role of user is {string}")
     public void asCheckRoleOfUserIs(String sRole) {
         String sInfoRole = getDriver().findElement(By.xpath("//div[@class='info']/p")).getText();
         assertThat(sInfoRole.equals(sRole)).isTrue();
@@ -56,5 +59,68 @@ public class AnastasiiaSokolovaStepDefs {
         Thread.sleep(iTime*1000);
     }
 
+    @Then("AS click on {string} menu item")
+    public void asClickOnMenuItem(String sMenuItem) {
+        System.out.println("MenuItem   " + sMenuItem);
+        getDriver().findElement(By.xpath("//h5[contains(text(),'"+sMenuItem+"')]")).click();
+    }
+
+    @Then("AS switch to {string} tab")
+    public void asSwitchToTab(String sTabName) {
+        getDriver().findElement(By.xpath("//div[contains(text(),'"+sTabName+"')]")).click();
+    }
+
+
+    @Then("AS click on {string} in the teacher list")
+    public void asClickOnInTheTeacherList(String sTeacherName) {
+        List<WebElement> teachertNames = getDriver().findElements(By.xpath("//mat-list-item"));
+        for (WebElement item : teachertNames) {
+            if (item.getText().contains(sTeacherName)) {
+                item.click();
+            }
+        }
+    }
+
+    @Then("AS click on element with {string}")
+    public void asClickOnElementWith(String sXpath) {
+        getDriver().findElement(By.xpath(sXpath)).click();
+    }
+
+    @And("AS wait for element with {string} to be present")
+    public void asWaitForElementWithToBePresent(String xpath) {
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.not(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath))));
+    }
+
+    @Then("AS verify that profile mutches {string}")
+    public void asVerifyThatProfileMutches(String sName) {
+        String sPrintedName = getDriver().findElement(By.xpath("//div[@class='horizontal-group']/h2")).getText();
+        System.out.println("Printed teacher's name is   "+sPrintedName);
+        assertThat(sPrintedName.equals(sName)).isTrue();
+    }
+
+    @Then("AS click on {string} button")
+    public void asClickOnButton(String sButtonName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'"+sButtonName+"')]")).click();
+    }
+
+    @Then("AS type {string} as Quiz Title")
+    public void asTypeAsQuizTitle(String sQuizTitle) {
+        getDriver().findElement(By.xpath("//input[@placeholder='Title Of The Quiz *']")).sendKeys(sQuizTitle);
+    }
+
+    @Then("AS add a question")
+    public void asAddAQuestion() {
+        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+    }
+
+    @Then("AS choose {string} question type")
+    public void asChooseQuestionType(String sQuestionChoice) {
+        getDriver().findElement(By.xpath("//*[contains(text(),'"+sQuestionChoice+"')]")).click();
+    }
+
+    @Then("AS type {string} as {string}")
+    public void asTypeAs(String sFieldValue, String sFieldPosition) {
+        getDriver().findElement(By.xpath("//textarea[@placeholder='"+sFieldPosition+"*']")).sendKeys(sFieldValue);
+    }
 }
 

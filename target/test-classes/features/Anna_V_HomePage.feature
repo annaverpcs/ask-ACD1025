@@ -5,7 +5,6 @@
   Feature: ASK application
 #comment
 
-
     @homepage1
     Scenario: Create a quiz and assign to a student
       Given AV navigate to "http://ask-internship.portnov.com/#/login"
@@ -15,7 +14,7 @@
       Then AV wait for 1 seconds
       Then AV click on "Quizzes" menu item
       Then AV wait for 1 seconds
-      Then AV click on the "Create New Quiz" button
+      Then AV click on "Create New Quiz" button
       Then AV wait for 1 seconds
       Then AV type "Quiz Title" as Quiz Title
       Then AV add a question
@@ -23,9 +22,8 @@
       Then AV type "Question Title" as "Question "
       Then AV type "Answer1" as "Option 1"
       Then AV type "Answer2" as "Option 2"
-      Then AV wait for 5 seconds
-      Then AV click on the "Save" button
-      Then AV wait for 5 seconds
+      Then AV click on "Save" button
+
 
 
     @scenario5
