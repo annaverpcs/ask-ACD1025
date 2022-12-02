@@ -27,36 +27,33 @@ public class AnnaVStepDefs {
 
     @Then("AV type {string} as firstname")
     public void avTypeAsFirstname(String sFirstName) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='firstName']")).sendKeys(sFirstName);
+        getDriver().findElement(By.xpath(XPathLibrary.sFirstNameXpath)).sendKeys(sFirstName);
     }
 
     @Then("AV type {string} as lastname")
     public void avTypeAsLastname(String sLastName) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='lastName']")).sendKeys(sLastName);
+        getDriver().findElement(By.xpath(XPathLibrary.sLastNameXpath)).sendKeys(sLastName);
     }
 
 
     @Then("AV type {string} as email")
     public void avTypeAsEmail(String sEmailAddress) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmailAddress);
+        getDriver().findElement(By.xpath(XPathLibrary.sEmailXpath)).sendKeys(sEmailAddress);
     }
 
     @Then("AV type {string} as group code")
     public void avTypeAsGroupCode(String sGroup) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='group']")).sendKeys(sGroup);
-    }
-    @Then("AV type {string} as password")
-    public void oavTypeAsPassword(String sPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
+        getDriver().findElement(By.xpath(XPathLibrary.sGroupXpath)).sendKeys(sGroup);
     }
 
     @Then("AV type {string} as confirm password")
-    public void oavTypeAsConfirmPassword(String sConfirmPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='confirmPassword']")).sendKeys(sConfirmPassword);
+    public void avTypeAsConfirmPassword(String sConfirmPassword) {
+        getDriver().findElement(By.xpath(XPathLibrary.sConfirmPasswordXpath)).sendKeys(sConfirmPassword);
     }
+
     @And("AV click on signup button")
-    public void oavClickOnSignupButton() {
-        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+    public void avClickOnSignupButton() {
+        getDriver().findElement(By.xpath(XPathLibrary.sSubmitButtonXpath)).click();
     }
 
     @Then("AV get activation token for user {string}")
@@ -129,6 +126,25 @@ public class AnnaVStepDefs {
          //textarea[@placeholder='Option 1*']
          //textarea[@placeholder='Option 2*']
     }
+
+    @Then("AV select correct {int} answer")
+    public void avSelectCorrectAnswer(int sCorrectAnswer) {
+
+        getDriver().findElement(By.xpath("//mat-radio-button[@class='mat-radio-button mat-accent']["+sCorrectAnswer+"]")).click();
+    }
+
+    @Then("AV click on Quiz Title {string}")
+    public void avClickOnQuizTitle(String sQuizTitle) {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+sQuizTitle+"')]")).click();
+    }
+
+
+    @Then("AV delete Quiz {string}")
+    public void avDeleteQuiz(String sQuizTitle) {
+        getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+sQuizTitle+"')]/../../..//span[contains(text(),'Delete')]")).click();
+    }
+
+
 
 }
 
