@@ -18,7 +18,7 @@ import static support.TestContext.getDriver;
 public class AnnaVStepDefs {
     private Integer userId;
     private String activationCode;
-
+    private String isFieldPosition;
 
     @Given("AV navigate to {string}")
     public void iNavigateTo(String sURL) {
@@ -76,16 +76,16 @@ public class AnnaVStepDefs {
 
     @Then("AV type {string} as Email Address")
     public void avTypeAsEmailAddress(String sEmail) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
+        getDriver().findElement(By.xpath(XPathLibrary.sEmailXpath)).sendKeys(sEmail);
     }
     @And("AV type {string} as Password")
     public void avTypeAsPassword(String sPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
+        getDriver().findElement(By.xpath(XPathLibrary.sPasswordXpath)).sendKeys(sPassword);
     }
 
-    @And("AV click on {string} button")
-    public void avClickOnButton(String sButtonName) {
-        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+    @And("AV click on Sign In button")
+    public void avClickOnSignInButton(){
+        getDriver().findElement(By.xpath(XPathLibrary.sSubmitButtonXpath)).click();
     }
 
     @Then("AV wait for {int} seconds")
@@ -99,8 +99,8 @@ public class AnnaVStepDefs {
         getDriver().findElement(By.xpath("//h5[contains(text(),'"+sMenuItem+"')]")).click();
     }
 
-    @Then("AV click on the {string} button")
-    public void avClickOnTheButton(String sButtonName) {
+    @Then("AV click on {string} button")
+    public void avClickOnButton(String sButtonName) {
         getDriver().findElement(By.xpath("//span[contains(text(),'"+sButtonName+"')]")).click();
     }
 
@@ -129,6 +129,7 @@ public class AnnaVStepDefs {
          //textarea[@placeholder='Option 1*']
          //textarea[@placeholder='Option 2*']
     }
+
 }
 
 
