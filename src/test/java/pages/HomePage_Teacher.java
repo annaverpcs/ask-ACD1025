@@ -32,7 +32,7 @@ public class HomePage_Teacher extends GenericPage{
     }
 
     JavascriptExecutor js = (JavascriptExecutor) getDriver();
-    js.executeScript()
+    //js.executeScript()
 
 
 
