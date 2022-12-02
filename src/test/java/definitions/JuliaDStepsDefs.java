@@ -11,17 +11,20 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
 public class JuliaDStepsDefs {
-    @Given("I open URL {string}")
-    public void iOpenURL(String sURL) {
+
+    @Given("JD I open URL {string}")
+    public void jdIOpenURL(String sURL) {
         getDriver().get(sURL);
     }
 
-
+    @Then("JD type {string} as Email Address")
+    public void jdTypeAsEmailAddress(String sEmail) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
+    }
 
     @And("JD type {string} as Password")
     public void jdTypeAsPassword(String sPassword) {
         getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
-        
     }
 
     @And("JD I click on {string} button")
@@ -34,8 +37,5 @@ public class JuliaDStepsDefs {
         Thread.sleep(1000*iSec);
     }
 
-    @Then("JD type {string} as Email Address")
-    public void jdTypeAsEmailAddress(String sEmail) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
-    }
+
 }
