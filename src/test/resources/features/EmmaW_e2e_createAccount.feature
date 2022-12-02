@@ -31,3 +31,7 @@ Feature: End-to-End test case to create a student account
     Given I input a valid teacher password into the Password text field
     And I input a valid teacher email into the Email text field
     And I delete the student account
+#    And I delete the student account with DB
+
+
+

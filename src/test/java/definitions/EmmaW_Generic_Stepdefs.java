@@ -1,8 +1,8 @@
 package definitions;
 
 import cucumber.api.java.en.Given;
-import pages.IHasURL;
-import pages.LoginPage;
+import pages_EmmaW.IHasURL;
+import pages_EmmaW.LoginPage;
 
 
 public class EmmaW_Generic_Stepdefs {

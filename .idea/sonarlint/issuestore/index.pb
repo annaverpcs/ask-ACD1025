@@ -7,10 +7,6 @@ U
 %src/test/java/support/TestRunner.java,0/6/0668a12ac3b209489a0bddefd687ce4142da0755
 `
 0src/test/java/pages/ConfirmRegistrationPage.java,4/3/43fe4ec7504ed506a248c4a10dfdf40dfbf16d7a
-e
-5src/test/java/definitions/EmmaW_Generic_Stepdefs.java,d/c/dcb412f4f3faa2b32187ea1a89b9f6470fa962fe
-Y
-)src/test/java/pages/HomePage_Student.java,9/5/953c1f118e30a8ac8f9ca37d88d2d178b48a728f
 P
  src/test/java/pages/IHasURL.java,2/c/2c47c6ab162ee88498b3547b58ce6fc2c63ff7f6
 V
@@ -23,5 +19,3 @@ Y
 )src/test/java/pages/RegistrationPage.java,7/0/705c52e81e81bc6a508de54ed0ba77082630225f
 T
 $src/test/java/pages/GenericPage.java,d/1/d1f649500a471adb592577d7041a35937a084d30
-S
-#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0

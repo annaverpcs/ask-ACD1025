@@ -1,4 +1,4 @@
-package pages;
+package pages_EmmaW;
 
 //import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.JavascriptExecutor;

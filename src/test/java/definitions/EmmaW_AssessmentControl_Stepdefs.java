@@ -4,7 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.*;
+import pages_EmmaW.*;
 import support.DB_ConnectionHelper;
 import support.TestContext;
 import java.awt.datatransfer.UnsupportedFlavorException;
@@ -152,11 +152,23 @@ public class EmmaW_AssessmentControl_Stepdefs {
     @Given("I input a valid teacher email into the Email text field")
     public void iInputAValidTeacherEmailIntoTheEmailTextField() {
         loginPage.setEmail(teacherData.get("email"));
+        loginPage.signIn();
     }
 
     @And("I delete the student account")
     public void iDeleteTheStudentAccount() {
         homeTeacherPage.getUserManagement();
         homeTeacherPage.waitForList();
+        homeTeacherPage.getMyStudent(studentData.get("firstName"));
+        homeTeacherPage.clickOptions();
+
+
+    }
+
+    @And("I delete the student account with DB")
+    public void iDeleteTheStudentAccountWithDB() throws IOException, SQLException {
+
+
+        DB_ConnectionHelper.deleteUser(userId);
     }
 }

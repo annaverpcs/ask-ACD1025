@@ -1,4 +1,4 @@
-package Definitions;
+package support;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
-public class AnastMaksMyStepdefs {
+public class AnastMaksACD616MyStepdefs {
     @Given("I open URL {string}")
     public void iOpenURL(String sURL) {
         getDriver().get(sURL);

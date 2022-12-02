@@ -4,6 +4,8 @@
 
 package support;
 
+import org.openqa.selenium.JavascriptExecutor;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,6 +13,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.sql.*;
 import java.sql.PreparedStatement;
+
+import static support.TestContext.getDriver;
 
 public class Helpers {
     static final String DB_URL = "jdbc:mysql://44.198.158.182:3306/application?autoReconnect=true&useSSL=false";
@@ -57,4 +61,5 @@ public class Helpers {
             System.out.println("Error occurred while trying to send get request");
         }
     }
+
 }

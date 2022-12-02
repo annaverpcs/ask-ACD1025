@@ -1,10 +1,7 @@
-package pages;
+package pages_EmmaW;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static support.TestContext.getDriver;
 
 public class RegistrationPage extends GenericPage{
     @FindBy (xpath = "//*[@formcontrolname='firstName']")

@@ -120,3 +120,55 @@ INFO 09:30:14:913 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using 
 INFO 09:30:14:920 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/108.0.5359.71/chromedriver
 INFO 09:33:25:995 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
 INFO 09:33:26:003 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/108.0.5359.71/chromedriver
+INFO 14:32:44:553 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:32:44:617 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:34:05:525 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:34:05:582 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:34:31:510 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:34:31:562 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:35:42:787 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:35:42:833 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:38:15:894 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:38:15:940 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:39:46:387 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:39:46:443 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:41:11:849 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:41:11:889 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:42:37:808 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:42:37:859 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:44:04:430 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:44:04:475 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:44:39:576 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:44:39:647 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:45:05:779 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:45:05:840 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:51:32:617 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:51:32:699 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 14:55:06:677 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 14:55:06:726 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:01:21:787 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:01:21:836 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:05:34:758 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:05:34:814 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:11:46:827 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:11:46:876 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:14:17:302 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:14:17:357 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:17:24:309 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:17:24:354 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:19:01:941 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:19:01:983 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:19:48:824 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:19:48:871 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:21:42:839 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:21:42:883 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:24:49:264 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:24:49:306 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:28:10:129 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:28:10:181 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:29:35:679 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:29:35:746 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:30:29:492 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:30:29:538 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
+INFO 15:31:44:926 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 107.0.5304.62 (since Google Chrome 107 is installed in your machine)
+INFO 15:31:44:974 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/emmawatt/.m2/repository/webdriver/chromedriver/mac64/107.0.5304.62/chromedriver
