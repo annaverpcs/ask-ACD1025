@@ -157,9 +157,12 @@ public class EmmaW_AssessmentControl_Stepdefs {
         loginPage.setEmail(teacherData.get("email"));
     }
 
-    @And("I delete the student account with REST")
-    public void iDeleteTheStudentAccountWithREST() {
+
+    @And("I delete the student account")
+    public void iDeleteTheStudentAccount() {
         homeTeacherPage.getUserManagement();
         homeTeacherPage.waitForList();
+        homeTeacherPage.getMyStudent(studentData.get("firstName"));
+        homeTeacherPage.clickOptions();
     }
 }

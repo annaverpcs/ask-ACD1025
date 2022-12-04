@@ -68,29 +68,28 @@ public class DB_ConnectionHelper {
     }
 
 
-    ///////////trying smth
-    public static String getId(String userEmail) throws SQLException {
-        String result = "No data";
+    ////////delete
+    public static void deleteUser(int userId) throws IOException {
+        URL url = new URL("http://ask-internship.portnov.com/api/v1/users/" + userId );
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("DELETE");
+        con.setRequestProperty("User-Agent", "USER_AGENT");
+        int responseCode = con.getResponseCode();
+        System.out.println("Activation request response code: " + responseCode);
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
 
-        //establish the connection
-        Connection con = DriverManager.getConnection(DB_URL, USER, PASS);
-
-        try (PreparedStatement pstmt = con.prepareStatement("SELECT id FROM users WHERE email = ?");) {
-            //.setString accepts int parameterIndex, String x
-            //in our db email is in the second column, so index of 1, then we want that to be called userEmail
-            pstmt.setString(1, userEmail);
-            //execute the query and store the results
-            ResultSet rs = pstmt.executeQuery();
-
-//loop through the results
-            while (rs.next()) {
-                //we need to get the id as well, to later use it to activate the right user
-                result = rs.getString("id") + ";";
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+            in.close();
+
+            System.out.println(response);
+        } else {
+            System.out.println("Error occurred while trying to send get request");
         }
-        return result;
     }
 
 }
