@@ -2,7 +2,8 @@
   #Author Sara Bhat
 @assignmentbystname
 Feature:  Ask Application
-  @assignmentbystname1
+  @assignmentbystname1q
+
   Scenario: Assignment assigned by Student name
     Given SB navigate to "internship page"
     Then SB click on  Email  field
