@@ -39,7 +39,7 @@ public class Annie_AssignmentDate_StepDefs{
 
 
     @Then("I click on Assignments from the menu")
-    public void iClickOnAssignmentsFromTheMenu() throws InterruptedException {
+    public void iClickOnAssignmentsFromTheMenu() {
         getDriver().findElement(By.xpath("//h5[contains (text(),'Assignments')]")).click();
     }
 
@@ -75,7 +75,7 @@ public class Annie_AssignmentDate_StepDefs{
 
 
     @Then("I select all the students")
-    public void iSelectAllTheStudents() throws InterruptedException {
+    public void iSelectAllTheStudents() {
         getDriver().findElement(By.xpath("//span[contains(text(),'Select All')]")).click();
     }
 
@@ -88,7 +88,8 @@ public class Annie_AssignmentDate_StepDefs{
     @Then("I check that the most recent assignment on top has the current date")
     public void iCheckThatTheMostRecentAssignmentOnTopHasTheCurrentDate() {
         String assignmentDate = getDriver().findElement(By.xpath("//*[contains (text(),'Assignment Date')]")).getText();
-        String arr[] = assignmentDate.split(":");
+        String arr[];
+        arr[]= assignmentDate.split(":");
         String actualDate=arr[1].trim();
 
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yy");
