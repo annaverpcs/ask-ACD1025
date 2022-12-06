@@ -27,65 +27,35 @@ Feature:
     # verify selected teacher name on the Teacher Profile screen
     Then AS verify that profile matches "OlegPupkin"
     Then AS wait for 1 sec
+
+
+    @changUserName2
+    Scenario Outline:
     # click on Option button on the Teacher Profile screen
     Then AS click on element with "//span[@class='mat-button-wrapper']"
     Then AS wait for 3 sec
-
     #Select "Change User's Name" menu item on the pop-up menu
     #Then AS click on element with "//button[contains(text(),'Name')]"
     And AS wait for element with "//mat-dialog-container" to be present
 
-    Then AS type "OlgaPupkina" into New User's Name field
+    Then AS type <sName> into New User's Name field
     # Click the button Change
-    And AS check that element with "//span[contains(text(),'Change')]" is enabled
+    And AS check that element with "//span[contains(text(),'Change')]" is <sButtonChangeEnabled>
     Then AS click on element with "//span[contains(text(),'Change')]"
-    Then AS wait for 1 sec
-    Then AS verify that profile matches "OlgaPupkina"
-    Then AS wait for 1 sec
-    #-----------------------
-    # click on Option button on the Teacher Profile screen
-    Then AS click on element with "//span[@class='mat-button-wrapper']"
+    Then AS wait for 2 sec
+    Then AS verify that profile matches <sName>
     Then AS wait for 3 sec
-    #Select "Change User's Name" menu item on the pop-up menu
-    #Then AS click on element with "//button[contains(text(),'Name')]"
-
-    And AS wait for element with "//mat-dialog-container" to be present
-    Then AS type "Olga Pupkina" into New User's Name field
-    # Check the button Change
-    And AS check that element with "//span[contains(text(),'Change')]/.." is disabled
-    Then AS wait for 1 sec
-    And AS error message is "Should contain only latin characters"
-    Then AS wait for 1 sec
-    #-------------------
-    Then AS type "aaaaaabbbbbcccccdddddbdhvbdkjbvkjdxvnbvjkdbvjkxnjdvbjdbqwertyuiopasdfghjklzxcvbnmhkfbsushjdvdknvjnjkg" into New User's Name field
-    # Check the button Change
-    And AS check that element with "//span[contains(text(),'Change')]/.." is disabled
-    Then AS wait for 1 sec
-    And AS error message is "Too long. Should be at least 5 to 32 characters"
-    Then AS wait for 1 sec
-    #-------------------
-    Then AS type "" into New User's Name field
-    # Check the button Change
-    Then AS click on element with "//span[contains(text(),'Change')]"
-    And AS check that element with "//span[contains(text(),'Change')]/.." is disabled
-    Then AS wait for 1 sec
-    And AS error message is "This field is required"
-    Then AS wait for 1 sec
-    #-------------------
-    Then AS type "OlegPupkin" into New User's Name field
-    # Check the button Change
-    And AS check that element with "//span[contains(text(),'Change')]/.." is enabled
-    Then AS click on element with "//span[contains(text(),'Change')]"
-    Then AS wait for 1 sec
-    Then AS verify that profile matches "OlegPupkin"
-    Then AS wait for 1 sec
-
+    Examples:
+    |sName           |sButtonChangeEnabled|
+    |"OlgaPupkina"   |"enabled"           |
    # |"Olga Pupkina"  |"enabled"           |
    # |"A"             |"enabled"           |
+   # |""              |"disabled"          |
    # |"aaaaaabbbbbcccccdddddbdhvbdkjbvkjdxvnbvjkdbvjkxnjdvbjdbqwertyuiopasdfghjklzxcvbnmhkfbsushjdvdknvjnjk"|"enabled" |
+   # |"aaaaaabbbbbcccccdddddbdhvbdkjbvkjdxvnbvjkdbvjkxnjdvbjdbqwertyuiopasdfghjklzxcvbnmhkfbsushjdvdknvjnjkg"|"disabled" |
    # |"%#()"          |"enabled"           |
    # |"12354567890"   |"enabled"           |
-   # |" Olga"         |"enabled"           |
+   # |" Olga"         |"disabled"          |
    # |"Olga "         |"enabled"           |
 
 
