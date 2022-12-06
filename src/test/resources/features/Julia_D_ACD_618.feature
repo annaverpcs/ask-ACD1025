@@ -19,5 +19,9 @@ Feature: Multi-choice Options
     Then JD I add a question
     Then JD pick "Multiple-Choice" question type
     Then JD wait for 2 seconds
-    Then JD I click on the Add Option button several times
-    Then JD wait for 5 seconds
+    Then JD I click 10 times on the Add Option button
+    Then JD wait for 2 seconds
+    And element with xpath "//textarea[@placeholder='Option 16*']" should not be present
+    Then JD I click 5 times on the Add Option button
+    Then JD wait for 2 seconds
+    And element with xpath "//textarea[@placeholder='Option 16*']" should not be present

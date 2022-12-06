@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 import support.Helpers;
 
 import java.io.IOException;
@@ -16,10 +15,17 @@ import java.sql.SQLException;
 
 import static support.TestContext.getDriver;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static support.TestContext.getDriver;
+
 public class JuliaDStepsDefs {
     private Integer userId;
     private String activationCode;
-    private String isFieldPosition;
+
+
+
+
 
     @Given("JD I open URL {string}")
     public void jdIOpenURL(String sURL) {
@@ -151,15 +157,29 @@ public class JuliaDStepsDefs {
         getDriver().findElement(By.xpath("//span[contains(text(),'" + sAddOption + "')]")).click();
     }
 
-    @Then("JD I click on the Add Option button several times")
-    public void jdIClickOnTheAddOptionButtonSeveralTimes() {
-        WebElement buttonElement = getDriver().findElement(By.xpath("//span[contains(text(),'Add Option')]"));
-        int i;
-        for (i = 0; i <= 13; i++) {
-            buttonElement.click();
+    @Then("JD I click {int} times on the Add Option button")
+    public void jdIClickTimesOnTheAddOptionButton(int iTimes) {
+            WebElement buttonElement = getDriver().findElement(By.xpath("//span[contains(text(),'Add Option')]"));
+            int i;
+            for (i = 0; i <= iTimes; i++) {
+                buttonElement.click();
+            }
         }
+
+    @And("JD check that {string} is not present")
+    public void jdCheckThatIsNotPresent(String sExtraOption) {
+        assertThat(getDriver().findElement(By.xpath("//textarea[@placeholder='\" + sExtraOption + \"*']")).isDisplayed()).isFalse();
+    }
+
+
+    @And("element with xpath {string} should not be present")
+    public void elementWithXpathShouldNotBePresent(String sXpath) {
+        assertThat(getDriver().findElements(By.xpath(sXpath))).hasSize(0);
     }
 }
+
+
+
 
   
     
