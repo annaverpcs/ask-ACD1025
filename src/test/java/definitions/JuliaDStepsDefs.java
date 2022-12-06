@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,12 +28,12 @@ public class JuliaDStepsDefs {
 
     @Then("JD type {string} as Email Address")
     public void jdTypeAsEmailAddress(String sEmail) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(sEmail);
+        getDriver().findElement(By.xpath(XPathLibrary.sEmailXpath)).sendKeys(sEmail);
     }
 
     @And("JD type {string} as Password")
     public void jdTypeAsPassword(String sPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(sPassword);
+        getDriver().findElement(By.xpath(XPathLibrary.sPasswordXpath)).sendKeys(sPassword);
     }
 
     @And("JD I click on {string} button")
@@ -42,40 +43,40 @@ public class JuliaDStepsDefs {
 
     @Then("JD wait for {int} seconds")
     public void jdWaitForSeconds(long iSec) throws InterruptedException {
-        Thread.sleep(1000*iSec);
+        Thread.sleep(1000 * iSec);
     }
 
 
     @Then("JD I type {string} as First Name")
     public void jdITypeAsFirstName(String sFirstName) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname=\"firstName\"]")).sendKeys(sFirstName);
+        getDriver().findElement(By.xpath(XPathLibrary.sFirstName)).sendKeys(sFirstName);
 
     }
 
     @Then("JD I type {string} as Last NAme")
     public void jdITypeAsLastNAme(String sLastName) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname=\"lastName\"]")).sendKeys(sLastName);
+        getDriver().findElement(By.xpath(XPathLibrary.sLastName)).sendKeys(sLastName);
 
     }
 
     @Then("JD I type {string} as email")
     public void jdITypeAsEmail(String sEmail) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname=\"email\"]")).sendKeys(sEmail);
+        getDriver().findElement(By.xpath(XPathLibrary.sEmailXpath)).sendKeys(sEmail);
     }
 
     @Then("JD I type {string} as group code")
     public void jdITypeAsGroupCode(String sGroupCode) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname=\"group\"]")).sendKeys(sGroupCode);
+        getDriver().findElement(By.xpath(XPathLibrary.sGroupCode)).sendKeys(sGroupCode);
     }
 
     @Then("JD I type {string} as password")
     public void jdITypeAsPassword(String sPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname=\"password\"]")).sendKeys(sPassword);
+        getDriver().findElement(By.xpath(XPathLibrary.sPasswordXpath)).sendKeys(sPassword);
     }
 
     @Then("JD I type {string} as confirm password")
     public void jdITypeAsConfirmPassword(String sConfPassword) {
-        getDriver().findElement(By.xpath("//input[@formcontrolname=\"confirmPassword\"]")).sendKeys(sConfPassword);
+        getDriver().findElement(By.xpath(XPathLibrary.sConfPassword)).sendKeys(sConfPassword);
     }
 
     @Then("JD I click on Register Me button")
@@ -98,13 +99,67 @@ public class JuliaDStepsDefs {
         Helpers.activateUser(userId, activationCode);
     }
 
-    @Then("JD I click on Quizzes link")
-    public void avClickOnMenuItem() {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+    //@Then("JD I click on Quizzes link")
+    //public void avClickOnMenuItem() 
+    //{getDriver().findElement(By.xpath("//h5[contains(text(),'Quizzes')]")).click();
+    //}
+
+
+    @Then("JD I click on {string} menu item")
+    public void jdIClickOnMenuItem(String sMenueItem) {
+        getDriver().findElement(By.xpath("//h5[contains(text(),'" + sMenueItem + "')]")).click();
     }
 
     @Then("JD click on {string} button")
-    public void avClickOnMenuItem(String sMenuItem) {
-        getDriver().findElement(By.xpath("//h5[contains(text(),'" + sMenuItem + "')]")).click();
+    public void jdClickOnButton(String arg0) {
+    }
+
+    @Then("JD click on the {string} button")
+    public void jdClickOnTheButton(String sButtonName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'" + sButtonName + "')]")).click();
+    }
+
+    @Then("JD I type {string} for Quiz Title")
+    public void jdITypeForQuizTitle(String sQuizTitle) {
+        getDriver().findElement(By.xpath("//input[@placeholder=\"Title Of The Quiz *\"]")).sendKeys(sQuizTitle);
+    }
+
+    @Then("JD I add a question")
+    public void jdIAddAQuestion() {
+        ////mat-icon[contains(text(),'add_circle')]
+        getDriver().findElement(By.xpath("//mat-icon[contains(text(),'add_circle')]")).click();
+    }
+
+    @Then("JD pick {string} question type")
+    public void jdPickQuestionType(String sQuestionChoice) {
+        getDriver().findElement(By.xpath("//*[contains(text(),'" + sQuestionChoice + "')]")).click();
+    }
+
+
+    @Then("JD I type {string} as {string}")
+    public void avTypeAs(String sFieldValue, String sFieldPosition) {
+        getDriver().findElement(By.xpath("//textarea[@placeholder='" + sFieldPosition + "*']")).sendKeys(sFieldValue);
+
+        //textarea[@placeholder='Question *']
+        //textarea[@placeholder='Question 1*']
+        //textarea[@placeholder='Question 2*']
+    }
+
+
+    @Then("JD add option by click on the {string} button")
+    public void jdAddOptionByClickOnTheButton(String sAddOption) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'" + sAddOption + "')]")).click();
+    }
+
+    @Then("JD I click on the Add Option button several times")
+    public void jdIClickOnTheAddOptionButtonSeveralTimes() {
+        WebElement buttonElement = getDriver().findElement(By.xpath("//span[contains(text(),'Add Option')]"));
+        int i;
+        for (i = 0; i <= 13; i++) {
+            buttonElement.click();
+        }
     }
 }
+
+  
+    
