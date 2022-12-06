@@ -73,12 +73,16 @@ public class AnastasiiaSokolovaStepDefs {
 
     @Then("AS click on {string} in the teacher list")
     public void asClickOnInTheTeacherList(String sTeacherName) {
+        getDriver().findElement(By.xpath("//div[@class='mat-list-text']/*[contains(text(),'"+sTeacherName+"')]")).click();
+        //getDriver().findElement(By.xpath("//div[@class='mat-list-text']/*[text()='"+sTeacherName+"']")).click();
+        /*
         List<WebElement> teachertNames = getDriver().findElements(By.xpath("//mat-list-item"));
         for (WebElement item : teachertNames) {
             if (item.getText().contains(sTeacherName)) {
                 item.click();
             }
         }
+         */
     }
 
     @Then("AS click on element with {string}")
@@ -88,14 +92,23 @@ public class AnastasiiaSokolovaStepDefs {
 
     @And("AS wait for element with {string} to be present")
     public void asWaitForElementWithToBePresent(String xpath) {
-        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.not(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath))));
+        new WebDriverWait(getDriver(), 10, 200).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
     }
 
-    @Then("AS verify that profile mutches {string}")
+    @Then("AS verify that profile matches {string}")
     public void asVerifyThatProfileMutches(String sName) {
         String sPrintedName = getDriver().findElement(By.xpath("//div[@class='horizontal-group']/h2")).getText();
-        System.out.println("Printed teacher's name is   "+sPrintedName);
-        assertThat(sPrintedName.equals(sName)).isTrue();
+        System.out.println("sPrintedName is   |"+sPrintedName+"|");
+        System.out.println("sName is   |"+sPrintedName+"|");
+        if (sName.equals(sPrintedName)) {
+            System.out.println("sName is equal sPrintedName");
+        }
+        else {
+            System.out.println("sName is NOT equal sPrintedName");
+        }
+
+
+        //assertThat(sPrintedName.equals(sName)).isTrue();
     }
 
     @Then("AS click on {string} button")
@@ -121,6 +134,46 @@ public class AnastasiiaSokolovaStepDefs {
     @Then("AS type {string} as {string}")
     public void asTypeAs(String sFieldValue, String sFieldPosition) {
         getDriver().findElement(By.xpath("//textarea[@placeholder='"+sFieldPosition+"*']")).sendKeys(sFieldValue);
+    }
+
+    @Then("AS type {string} into New User's Name field")
+    public void asTypeIntoNewUserSNameField(String sNewName) {
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).clear();
+        getDriver().findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys(sNewName);
+    }
+
+    @And("AS check that element with {string} is enabled")
+    public void asCheckThatElementWithIsEnabled(String sXpath) {
+        assertThat(getDriver().findElement(By.xpath(sXpath)).isEnabled()).isTrue();
+        System.out.println("Button is enabled");
+    }
+
+    @And("AS check that element with {string} is disabled")
+    public void asCheckThatElementWithIsDisabled(String sXpath) {
+        assertThat(getDriver().findElement(By.xpath(sXpath)).isEnabled()).isFalse();
+        System.out.println("Button is disabled");
+    }
+
+
+    @And("AS check that element with {string} is {string}")
+    public void asCheckThatElementWithIs(String sXpath, String sButtonChangeEnabled) {
+        if (sButtonChangeEnabled.equals("enabled")){
+            assertThat(getDriver().findElement(By.xpath(sXpath)).isEnabled()).isTrue();
+            System.out.println("Button is enabled");
+        }
+        if (sButtonChangeEnabled.equals("disabled")){
+            System.out.println("Button is disabled");
+            assertThat(getDriver().findElement(By.xpath(sXpath)).isEnabled()).isFalse();
+        }
+    }
+
+
+    @And("AS error message is {string}")
+    public void asErrorMessageIs(String sErrorMessage) {
+        String sPrintedError = getDriver().findElement(By.xpath("//mat-error")).getText();
+        System.out.println("sPrintedError is |"+sPrintedError+"|");
+        System.out.println("sErrorMessage is |"+sErrorMessage+"|");
+        assertThat(sPrintedError.equals(sErrorMessage)).isTrue();
     }
 }
 
