@@ -21,8 +21,6 @@ R
 "src/test/java/pages/LoginPage.java,2/f/2febc867dad266b12f3cf09596e572e0dcf37dbf
 Y
 )src/test/java/pages/RegistrationPage.java,7/0/705c52e81e81bc6a508de54ed0ba77082630225f
-Y
-)src/test/java/pages/HomePage_Teacher.java,0/9/09616c99705d5c8ca55604712a9d1c6402db5609
 T
 $src/test/java/pages/GenericPage.java,d/1/d1f649500a471adb592577d7041a35937a084d30
 7
