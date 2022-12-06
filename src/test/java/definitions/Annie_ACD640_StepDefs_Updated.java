@@ -17,7 +17,7 @@ import static support.TestContext.getDriver;
 public class Annie_Annie640_StepDefs {
     private Integer userId;
     private String activationCode;
-    public String email;
+    public String email,url;
     @Given("I open the application {string}")
     public void iOpenTheApplication(String url) {
         getDriver().get(url);
@@ -27,8 +27,6 @@ public class Annie_Annie640_StepDefs {
     public void iClickOnTheRegisterNowButton() {
         getDriver().findElement(By.xpath(" //span[contains(text(),'Register Now')]")).click();
     }
-
-
 
     @Then("I should see the Registration Form")
     public void iShouldSeeTheRegistrationForm() {
@@ -131,33 +129,23 @@ public class Annie_Annie640_StepDefs {
         Helpers.activateUser(userId, activationCode);
     }
 
-//#Log In after Activation - Invalid Credential (Email) - Unsuccessful Attempt
-//#Log In after Activation - Invalid Credential (Password) - Unsuccessful Attempt
-// Same methods re-used for entering credentials
-
-
-//#Log In after Activation - Valid Credentials (Email and Password) - SUCCESS
+//Log In after Activation - Valid Credentials (Email and Password) - SUCCESS
 //Same methods re-used for entering credentials
     @Then("I must be able to see the home page")
     public void iMustBeAbleToSeeTheHomePage() {
         assert(getDriver().findElement(By.xpath("//ac-home-page")).isDisplayed());
     }
 
-
+    //Logging In using Invalid Credentials (Email/Password)
+    @Then("I must NOT be able to see the home page")
+    public void iMustNOTBeAbleToSeeTheHomePage() {
+        assert(!(getDriver().getCurrentUrl().equals(this.url)));
+    }
 //********************** Wait **************************************
 
     @Then("I wait for {int} seconds")
     public void iWaitForSeconds(int n) throws InterruptedException{
         Thread.sleep(n*1000);
     }
-
-
-    @Then("I must NOT be able to see the home page")
-    public void iMustNOTBeAbleToSeeTheHomePage() {
-        boolean b=getDriver().findElement(By.xpath("//ac-home-page")).isDisplayed();
-        assert !b;
-    }
-
-
 }
 

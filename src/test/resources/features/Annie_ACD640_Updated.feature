@@ -37,7 +37,7 @@
       Then I wait for <n> seconds
       Examples:
         | url                                         | expectedTitle                  | fName   | lName   | email               | groupCode | password | confirmPassword | message                    | n |
-        | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "Larry" | "Style" | "Babloo2@gina.comm" | "BCBS"     | "12345"  | "12345"         | "You have been registered" | 2 |
+        | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "Larry" | "Style" | "Babloo4@gina.comm" | "BCBS"     | "12345"  | "12345"         | "You have been registered" | 2 |
 
     Scenario Outline: ACD 640 - Activated User - Invalid Credentials - Fails to Log In
 
@@ -50,7 +50,7 @@
 
       Examples:
         | url                                         | expectedTitle                  | email               | password |
-        | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "Babloo2@gina.comm" | "wrongpasswd"  |
+        | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "Babloo4@gina.comm" | "wrongpasswd"  |
         | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "wronguname@qina.comm" | "12345"  |
 
     Scenario Outline: ACD 640 - New user Registration-No Activation - Log In - Fails to Log In
@@ -76,10 +76,11 @@
       Then I type the email as <email> and password in <password> fields
       And I click on Sign-IN button
       Then I should see the Authentication-Failed message
+      And I must NOT be able to see the home page
 
       Examples:
         | url                                         | expectedTitle                  | fName   | lName   | email               | groupCode | password | confirmPassword | message                    | n |
-        | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "Larry" | "Style" | "Babloo2@gina.comm" | "BCBS"     | "12345"  | "12345"         | "You have been registered" | 2 |
+        | "http://ask-internship.portnov.com/#/login" | "Assessment Control @ Portnov" | "Larry" | "Style" | "Babloo4@gina.comm" | "BCBS"     | "12345"  | "12345"         | "You have been registered" | 2 |
 
 
 
