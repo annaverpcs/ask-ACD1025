@@ -88,8 +88,8 @@ public class Annie_AssignmentDate_StepDefs{
     @Then("I check that the most recent assignment on top has the current date")
     public void iCheckThatTheMostRecentAssignmentOnTopHasTheCurrentDate() {
         String assignmentDate = getDriver().findElement(By.xpath("//*[contains (text(),'Assignment Date')]")).getText();
-        String arr[];
-        arr[]= assignmentDate.split(":");
+        String[] arr= assignmentDate.split(":");
+        arr[0]= String.valueOf(assignmentDate.split(":"));
         String actualDate=arr[1].trim();
 
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yy");
