@@ -13,6 +13,7 @@ import support.Helpers;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class AnnaVStepDefs {
@@ -143,7 +144,46 @@ public class AnnaVStepDefs {
     public void avDeleteQuiz(String sQuizTitle) {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+sQuizTitle+"')]/../../..//span[contains(text(),'Delete')]")).click();
     }
+    @Then("AV click on {string} link")
+    public void avClickOnLink(String sLinkName) {
+        getDriver().findElement(By.xpath("//span[contains(text(),'Go To Users Management')]")).click();
 
+    }
+
+    @Then("AV click on {string} and {string} student link")
+    public void avClickOnAndStudentLink(String sFirstName, String sLastName) {
+        String sFullName = sFirstName+" "+sLastName+" ";
+        getDriver().findElement(By.xpath("//mat-tab-body/..//mat-list-item/..//div[@class='mat-list-text']/h4[text()= '"+sFullName+"']")).click();
+
+    }
+
+    @Then("AV click on Options button")
+    public void avClickOnOptionsButton() {
+        getDriver().findElement(By.xpath("//button[@class='mat-raised-button mat-accent']")).click();
+        }
+
+
+    @Then("AV click on Delete User option")
+    public void avClickOnDeleteUserOption() {
+       //getDriver().findElement(By.xpath("//button/..//mat-icon[contains(text(),'delete')]")).click();
+        getDriver().findElement(By.xpath("//div[@class = 'mat-menu-content ng-trigger ng-trigger-fadeInItems']/button[4]")).click();
+
+        if (getDriver().findElement(By.xpath("//mat-dialog-container[@role='dialog']")).isDisplayed()){
+            getDriver().findElement(By.xpath("//span[contains(text(),'Delete')]")).click();
+
+        }
+    }
+
+    @Then("AV validate that {string} and {string} student is deleted")
+    public void avValidateThatAndStudentIsDeleted(String sFirstName, String sLastName) {
+        String sFullName = sFirstName+" "+sLastName+" ";
+        System.out.println(sFullName);
+        String sXpath = "//mat-tab-body/..//mat-list-item/..//div[@class='mat-list-text']/h4[text()= '"+sFullName+"']";
+        System.out.println(sXpath);
+        //assertThat(getDriver().findElement(By.xpath(sXpath)).isDisplayed()).isFalse(); wrong approach
+
+        assertThat(getDriver().getPageSource().contains(sFullName)).isFalse();
+    }
 
 
 }
