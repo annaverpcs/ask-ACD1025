@@ -278,3 +278,23 @@ INFO 16:39:22:121 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using 
 INFO 16:39:22:128 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/108.0.5359.71/chromedriver
 INFO 16:41:28:403 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
 INFO 16:41:28:410 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as /Users/nastya/.m2/repository/webdriver/chromedriver/mac64/108.0.5359.71/chromedriver
+INFO 23:38:06:436 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 23:38:06:512 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 23:53:09:453 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 23:53:09:496 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:00:38:420 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:00:38:472 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:07:42:640 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:07:42:696 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:09:53:691 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:09:53:731 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:17:02:286 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:17:02:329 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:43:06:353 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:43:06:404 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:46:59:805 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:46:59:849 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 00:48:27:483 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 00:48:27:529 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
+INFO 01:24:17:720 wdm.WebDriverManager detectDriverVersionFromBrowser:615 Using chromedriver 108.0.5359.71 (since Google Chrome 108 is installed in your machine)
+INFO 01:24:17:763 wdm.WebDriverManager exportDriver:1113 Exporting webdriver.chrome.driver as C:\Users\sumithra\.m2\repository\webdriver\chromedriver\win32\108.0.5359.71\chromedriver.exe
