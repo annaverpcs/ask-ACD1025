@@ -38,7 +38,7 @@ public class HomePage_Teacher extends GenericPage{
     }
 
     public void getMyStudent(String name){
-        //List<WebElement> studentNames = getDriver().findElements(By.xpath("//mat-list-option"));
+        ////List<WebElement> studentNames = getDriver().findElements(By.xpath("//mat-list-option"));
         for(WebElement item : studentNames()){
             if(item.getText().contains(name)){
                 item.click();
